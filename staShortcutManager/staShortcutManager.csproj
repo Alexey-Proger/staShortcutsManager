@@ -40,7 +40,7 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>0886540596F20BF8B0791797AEF8FAE0A7DC6A1F</ManifestCertificateThumbprint>
@@ -49,7 +49,7 @@
     <ManifestKeyFile>staShortcutManager_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>staShortcutManager_TemporaryKey.pfx</AssemblyOriginatorKeyFile>

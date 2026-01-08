@@ -16,6 +16,7 @@ namespace staShortcutManager
 {
     public partial class MainForm : Form
     {
+        #region Main
         private string twrpPath = @"C:\bootfiles\twrp.img";
         private string icoPath = @"C:\bootfiles\twrp.ico";
         private string folderPath = @"C:\bootfiles\";
@@ -44,9 +45,10 @@ namespace staShortcutManager
                 MessageBox.Show("sta not detected.\nDownload it manually or connect to Internet and try again.", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(0);
             }
-                InitializeComponent();
-        }
 
+            InitializeComponent();
+        }
+        #endregion
 
         #region Buttons logic
 
@@ -94,10 +96,16 @@ namespace staShortcutManager
         }
         #endregion
 
+        #region Tasks
         private async Task updateTask()
         {
             ProgressForm pf = new ProgressForm();
+            pf.Location = new Point(
+                    this.Left + (this.Width - pf.Width) / 2,
+                    this.Top + (this.Height - pf.Height) / 2
+                );
             pf.Show(this);
+
             if (Functions.InternetAvailability())
             {
                 try
@@ -129,7 +137,12 @@ namespace staShortcutManager
         private async Task twrpTask()
         {
             ProgressForm pf = new ProgressForm();
+            pf.Location = new Point(
+                    this.Left + (this.Width - pf.Width) / 2,
+                    this.Top + (this.Height - pf.Height) / 2
+                );
             pf.Show(this);
+
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
@@ -159,5 +172,6 @@ namespace staShortcutManager
             await Task.Delay(800);
             pf.Close();
         }
+        #endregion
     }
 }

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("WOA Tools & Scripts Official")]
 [assembly: AssemblyProduct("sta Shortcuts Manager")]
-[assembly: AssemblyCopyright("AlexeyProger© 2026. All rights reserved.")]
+[assembly: AssemblyCopyright("© 2026, WOA Tools & Scripts Official. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

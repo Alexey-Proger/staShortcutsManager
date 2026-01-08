@@ -50,7 +50,7 @@
             // 
             // openICON
             // 
-            this.openICON.Filter = "Icon file|*.ico|Bitmap file|*.bmp";
+            this.openICON.Filter = "Icon file|*.ico";
             // 
             // label1
             // 

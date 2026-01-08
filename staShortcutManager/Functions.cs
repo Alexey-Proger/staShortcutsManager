@@ -49,7 +49,7 @@ namespace staShortcutManager
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error has occurred while creating shortcut:\n" + ex.Message);
+                MessageBox.Show("An error has occurred while creating shortcut:\n" + ex.Message, "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -128,7 +128,7 @@ namespace staShortcutManager
             this.MinimizeBox = false;
             this.ControlBox = false;
             this.Name = "ProgressForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen; // Центрируем по экрану
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Please wait...";
             this.ResumeLayout(false);
         }
@@ -138,10 +138,6 @@ namespace staShortcutManager
         public void UpdateProgress(int percentage)
         {
             progressBar.Value = percentage;
-        }
-        public void UpdateName(string name)
-        {
-            this.Name = name;
         }
     }
 }

@@ -53,8 +53,13 @@ namespace staShortcutManager
             string folderPath = @"C:\bootfiles\";
             string bootPathNew = Path.Combine(folderPath, bootName);
             string iconPathNew = Path.Combine(folderPath, iconName);
-            iconPathNew = iconPathNew + ".ico";
             bool cancel = false;
+
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
             if (File.Exists(bootPathNew))
             {
                 DialogResult result = MessageBox.Show($"File {bootPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager - Error", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -68,6 +73,7 @@ namespace staShortcutManager
             }
             else
                 File.Copy(bootPath, bootPathNew);
+
             if (File.Exists(iconPathNew))
             {
                 DialogResult result = MessageBox.Show($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager - Error", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -81,10 +87,11 @@ namespace staShortcutManager
             }
             else
                 File.Copy(iconPath, iconPathNew);
+
             if (!cancel)
             {
-                Functions.CreateShortcut(bootPathNew, tBname.Text, true, iconPathNew);
-                this.Close();
+                try { Functions.CreateShortcut(bootPathNew, tBname.Text, true, iconPathNew); this.Close(); }
+                catch (Exception ex) { MessageBox.Show("An error has occurred while creating shortcut:\n" + ex.Message + "\nTry changing shortcut name.", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
