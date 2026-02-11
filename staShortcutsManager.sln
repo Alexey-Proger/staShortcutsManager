@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "staShortcutManager", "staShortcutManager\staShortcutManager.csproj", "{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "staShortcutsManager", "staShortcutsManager\staShortcutsManager.csproj", "{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

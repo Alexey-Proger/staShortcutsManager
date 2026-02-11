@@ -1,4 +1,5 @@
-﻿using System;
+﻿using staShortcutsManager.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace staShortcutManager
+namespace staShortcutsManager
 {
     public partial class CustomShortcutForm : Form
     {
@@ -62,28 +63,49 @@ namespace staShortcutManager
 
             if (File.Exists(bootPathNew))
             {
-                DialogResult result = MessageBox.Show($"File {bootPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager - Error", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                Settings.Default.fileAction = 1;
+                using (MessageForm mf = new MessageForm($"File {bootPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", true))
                 {
-                    File.Delete(bootPathNew);
-                    File.Copy(bootPath, bootPathNew);
+                    mf.ShowDialog(this);
                 }
-                else
-                    cancel = true;
+                switch (Settings.Default.fileAction)
+                {
+                    case 0:
+                        File.Delete(bootPathNew);
+                        File.Copy(bootPath, bootPathNew);
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        cancel = true;
+                        break;
+                }
             }
             else
                 File.Copy(bootPath, bootPathNew);
 
             if (File.Exists(iconPathNew))
             {
-                DialogResult result = MessageBox.Show($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager - Error", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                if (!cancel)
                 {
-                    File.Delete(iconPathNew);
-                    File.Copy(iconPath, iconPathNew);
+                    Settings.Default.fileAction = 1;
+                    using (MessageForm mf = new MessageForm($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", true))
+                    {
+                        mf.ShowDialog(this);
+                    }
+                    switch (Settings.Default.fileAction)
+                    {
+                        case 0:
+                            File.Delete(iconPathNew);
+                            File.Copy(iconPath, iconPathNew);
+                            break;
+                        case 1:
+                            break;
+                        case 2:
+                            cancel = true;
+                            break;
+                    }
                 }
-                else
-                    cancel = true;
             }
             else
                 File.Copy(iconPath, iconPathNew);
@@ -91,7 +113,7 @@ namespace staShortcutManager
             if (!cancel)
             {
                 try { Functions.CreateShortcut(bootPathNew, tBname.Text, true, iconPathNew); this.Close(); }
-                catch (Exception ex) { MessageBox.Show("An error has occurred while creating shortcut:\n" + ex.Message + "\nTry changing shortcut name.", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                catch (Exception ex) { MessageBox.Show($"An error has occurred while creating shortcut:\n{ex}\nTry changing shortcut name.", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 

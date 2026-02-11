@@ -1,4 +1,4 @@
-﻿namespace staShortcutManager
+﻿namespace staShortcutsManager
 {
     partial class AboutForm
     {
@@ -40,8 +40,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::staShortcutManager.Properties.Resources.icon1;
-            this.pictureBox1.InitialImage = global::staShortcutManager.Properties.Resources.about;
+            this.pictureBox1.Image = global::staShortcutsManager.Properties.Resources.icon1;
+            this.pictureBox1.InitialImage = global::staShortcutsManager.Properties.Resources.about;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 61);
@@ -51,37 +51,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(88, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 24);
+            this.label1.Size = new System.Drawing.Size(213, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "sta Shortcuts Manager";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(88, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 20);
+            this.label2.Size = new System.Drawing.Size(37, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "v1.0";
+            this.label2.Text = "v1.1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.75F);
             this.label3.Location = new System.Drawing.Point(10, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(326, 100);
+            this.label3.Size = new System.Drawing.Size(352, 115);
             this.label3.TabIndex = 3;
-            this.label3.Text = "This tool can create custom shortcuts for sta.\r\nNotice: TWRP files are downloaded" +
-    " over \r\nthe Internet.\r\n\r\nAuthor: @AlexeyProger";
+            this.label3.Text = "This tool can create custom shortcuts for sta.\r\nNotice: Some functions require an" +
+    " Internet \r\nconnection.\r\n\r\nAuthor: @AlexeyProger";
             // 
             // butOK
             // 
-            this.butOK.Location = new System.Drawing.Point(214, 140);
+            this.butOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butOK.Location = new System.Drawing.Point(235, 155);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(122, 40);
             this.butOK.TabIndex = 4;
@@ -92,10 +93,10 @@
             // linkAlexey
             // 
             this.linkAlexey.AutoSize = true;
-            this.linkAlexey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkAlexey.Location = new System.Drawing.Point(66, 160);
+            this.linkAlexey.Font = new System.Drawing.Font("Segoe UI", 12.75F);
+            this.linkAlexey.Location = new System.Drawing.Point(72, 172);
             this.linkAlexey.Name = "linkAlexey";
-            this.linkAlexey.Size = new System.Drawing.Size(118, 20);
+            this.linkAlexey.Size = new System.Drawing.Size(126, 23);
             this.linkAlexey.TabIndex = 5;
             this.linkAlexey.TabStop = true;
             this.linkAlexey.Text = "@AlexeyProger";
@@ -105,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 188);
+            this.ClientSize = new System.Drawing.Size(369, 208);
             this.Controls.Add(this.linkAlexey);
             this.Controls.Add(this.butOK);
             this.Controls.Add(this.label3);

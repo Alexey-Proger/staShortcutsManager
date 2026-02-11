@@ -1,4 +1,4 @@
-﻿namespace staShortcutManager
+﻿namespace staShortcutsManager
 {
     partial class CustomShortcutForm
     {
@@ -46,7 +46,7 @@
             // 
             // openIMG
             // 
-            this.openIMG.Filter = "Android boot files|*.img";
+            this.openIMG.Filter = "Android boot.img file|*.img";
             // 
             // openICON
             // 
@@ -55,20 +55,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(74, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(68, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 24);
+            this.label1.Size = new System.Drawing.Size(238, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Creating custom shortcut";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12.75F);
+            this.label2.Location = new System.Drawing.Point(12, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 20);
+            this.label2.Size = new System.Drawing.Size(143, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Path to boot.img:";
             // 
@@ -85,7 +85,7 @@
             // 
             // butBoot
             // 
-            this.butBoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butBoot.Font = new System.Drawing.Font("Segoe UI", 12.75F);
             this.butBoot.Location = new System.Drawing.Point(248, 61);
             this.butBoot.Name = "butBoot";
             this.butBoot.Size = new System.Drawing.Size(104, 32);
@@ -96,7 +96,7 @@
             // 
             // butIcon
             // 
-            this.butIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butIcon.Font = new System.Drawing.Font("Segoe UI", 12.75F);
             this.butIcon.Location = new System.Drawing.Point(248, 118);
             this.butIcon.Name = "butIcon";
             this.butIcon.Size = new System.Drawing.Size(104, 32);
@@ -119,17 +119,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(12, 98);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.75F);
+            this.label3.Location = new System.Drawing.Point(12, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
+            this.label3.Size = new System.Drawing.Size(106, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Path to icon:";
             // 
             // butCreate
             // 
             this.butCreate.Enabled = false;
-            this.butCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butCreate.Font = new System.Drawing.Font("Segoe UI", 12.75F);
             this.butCreate.Location = new System.Drawing.Point(12, 218);
             this.butCreate.Name = "butCreate";
             this.butCreate.Size = new System.Drawing.Size(167, 40);
@@ -141,7 +141,7 @@
             // butCancel
             // 
             this.butCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.butCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butCancel.Font = new System.Drawing.Font("Segoe UI", 12.75F);
             this.butCancel.Location = new System.Drawing.Point(185, 218);
             this.butCancel.Name = "butCancel";
             this.butCancel.Size = new System.Drawing.Size(167, 40);
@@ -165,10 +165,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 155);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.75F);
+            this.label4.Location = new System.Drawing.Point(12, 153);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 20);
+            this.label4.Size = new System.Drawing.Size(127, 23);
             this.label4.TabIndex = 9;
             this.label4.Text = "Shortcut name:";
             // 
@@ -195,7 +195,7 @@
             this.MinimizeBox = false;
             this.Name = "CustomShortcutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Create custom shortcut";
+            this.Text = "Creating custom shortcut";
             this.ResumeLayout(false);
             this.PerformLayout();
 

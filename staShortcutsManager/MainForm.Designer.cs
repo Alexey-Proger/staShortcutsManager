@@ -1,4 +1,4 @@
-﻿namespace staShortcutManager
+﻿namespace staShortcutsManager
 {
     partial class MainForm
     {
@@ -33,7 +33,7 @@
             this.separator = new System.Windows.Forms.Label();
             this.about = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
-            this.update = new System.Windows.Forms.Button();
+            this.settings = new System.Windows.Forms.Button();
             this.custom = new System.Windows.Forms.Button();
             this.twrp = new System.Windows.Forms.Button();
             this.android = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             // about
             // 
             resources.ApplyResources(this.about, "about");
-            this.about.Image = global::staShortcutManager.Properties.Resources.about;
+            this.about.Image = global::staShortcutsManager.Properties.Resources.about;
             this.about.Name = "about";
             this.about.UseVisualStyleBackColor = true;
             this.about.Click += new System.EventHandler(this.about_Click);
@@ -65,18 +65,18 @@
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // update
+            // settings
             // 
-            resources.ApplyResources(this.update, "update");
-            this.update.Image = global::staShortcutManager.Properties.Resources.update;
-            this.update.Name = "update";
-            this.update.UseVisualStyleBackColor = true;
-            this.update.Click += new System.EventHandler(this.update_Click);
+            resources.ApplyResources(this.settings, "settings");
+            this.settings.Image = global::staShortcutsManager.Properties.Resources.settings;
+            this.settings.Name = "settings";
+            this.settings.UseVisualStyleBackColor = true;
+            this.settings.Click += new System.EventHandler(this.settings_Click);
             // 
             // custom
             // 
             resources.ApplyResources(this.custom, "custom");
-            this.custom.Image = global::staShortcutManager.Properties.Resources.shortcut;
+            this.custom.Image = global::staShortcutsManager.Properties.Resources.shortcut;
             this.custom.Name = "custom";
             this.custom.UseVisualStyleBackColor = true;
             this.custom.Click += new System.EventHandler(this.custom_Click);
@@ -84,7 +84,7 @@
             // twrp
             // 
             resources.ApplyResources(this.twrp, "twrp");
-            this.twrp.Image = global::staShortcutManager.Properties.Resources.twrp;
+            this.twrp.Image = global::staShortcutsManager.Properties.Resources.twrp;
             this.twrp.Name = "twrp";
             this.twrp.UseVisualStyleBackColor = true;
             this.twrp.Click += new System.EventHandler(this.twrp_Click);
@@ -92,7 +92,7 @@
             // android
             // 
             resources.ApplyResources(this.android, "android");
-            this.android.Image = global::staShortcutManager.Properties.Resources.sta;
+            this.android.Image = global::staShortcutsManager.Properties.Resources.sta;
             this.android.Name = "android";
             this.android.UseVisualStyleBackColor = true;
             this.android.Click += new System.EventHandler(this.android_Click);
@@ -103,7 +103,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.exit);
             this.Controls.Add(this.about);
-            this.Controls.Add(this.update);
+            this.Controls.Add(this.settings);
             this.Controls.Add(this.separator);
             this.Controls.Add(this.custom);
             this.Controls.Add(this.twrp);
@@ -124,7 +124,7 @@
         private System.Windows.Forms.Button twrp;
         private System.Windows.Forms.Button custom;
         private System.Windows.Forms.Label separator;
-        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button settings;
         private System.Windows.Forms.Button about;
         private System.Windows.Forms.Button exit;
     }

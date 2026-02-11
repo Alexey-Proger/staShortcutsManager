@@ -1,4 +1,5 @@
 ﻿using IWshRuntimeLibrary;
+using staShortcutsManager.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +13,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace staShortcutManager
+namespace staShortcutsManager
 {
     public partial class MainForm : Form
     {
         #region Main
+
         private string twrpPath = @"C:\bootfiles\twrp.img";
         private string icoPath = @"C:\bootfiles\twrp.ico";
         private string folderPath = @"C:\bootfiles\";
@@ -31,10 +33,17 @@ namespace staShortcutManager
                     try
                     {
                         Functions.staUpdate();
+                        using (MessageForm mf = new MessageForm("sta downloaded successfully.", "sta Shortcuts Manager", false))
+                        {
+                            mf.ShowDialog();
+                        }
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show($"An error has occurred: \n{ex}", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        using (MessageForm mf = new MessageForm($"An error has occurred: \n{ex}", "sta Shortcuts Manager - Error", false))
+                        {
+                            mf.ShowDialog();
+                        }
                     }
                 }
                 else
@@ -42,12 +51,16 @@ namespace staShortcutManager
             }
             else if (Functions.staCheck() == "nf" && !Functions.InternetAvailability())
             {
-                MessageBox.Show("sta not detected.\nDownload it manually or connect to Internet and try again.", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                using (MessageForm mf = new MessageForm("sta not detected.\nDownload it manually or connect to Internet and try again.", "sta Shortcuts Manager - Error", false))
+                {
+                    mf.ShowDialog();
+                }
                 Environment.Exit(0);
             }
 
             InitializeComponent();
         }
+
         #endregion
 
         #region Buttons logic
@@ -73,21 +86,25 @@ namespace staShortcutManager
         private void custom_Click(object sender, EventArgs e)
         {
             CustomShortcutForm csf = new CustomShortcutForm();
+            this.Enabled = false;
             csf.ShowDialog(this);
+            this.Enabled = true;
         }
 
-        private async void update_Click(object sender, EventArgs e)
+        private void settings_Click(object sender, EventArgs e)
         {
+            SettingsForm sf = new SettingsForm();
             this.Enabled = false;
-            await updateTask();
+            sf.ShowDialog(this);
             this.Enabled = true;
-            this.Focus();
         }
 
         private void about_Click(object sender, EventArgs e)
         {
             AboutForm about = new AboutForm();
+            this.Enabled = false;
             about.ShowDialog(this);
+            this.Enabled = true;
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -97,56 +114,12 @@ namespace staShortcutManager
         #endregion
 
         #region Tasks
-        private async Task updateTask()
-        {
-            ProgressForm pf = new ProgressForm();
-            pf.Location = new Point(
-                    this.Left + (this.Width - pf.Width) / 2,
-                    this.Top + (this.Height - pf.Height) / 2
-                );
-            pf.Show(this);
-
-            if (Functions.InternetAvailability())
-            {
-                try
-                {
-                    await Task.Run(() =>
-                    {
-                        Functions.staUpdate();
-                        pf.UpdateProgress(50);
-                        Functions.twrpUpdate();
-                        pf.UpdateProgress(100);
-                    });
-                    await Task.Delay(800);
-                    pf.Close();
-                    //MessageBox.Show($"sta and TWRP updated successfully.", "sta Shortcuts Manager - Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error has occurred: \n{ex}", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    pf.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No Internet connection. Please connect and try again.", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                pf.Close();
-            }
-        }
 
         private async Task twrpTask()
         {
             ProgressForm pf = new ProgressForm();
-            pf.Location = new Point(
-                    this.Left + (this.Width - pf.Width) / 2,
-                    this.Top + (this.Height - pf.Height) / 2
-                );
-            pf.Show(this);
+            pf.Show();
 
-            if (!Directory.Exists(folderPath))
-            {
-                Directory.CreateDirectory(folderPath);
-            }
             if (Functions.InternetAvailability())
             {
                 try
@@ -154,23 +127,29 @@ namespace staShortcutManager
                     await Task.Run(() =>
                     {
                         Functions.twrpUpdate();
-                        pf.UpdateProgress(50);
-                        Functions.CreateShortcut(twrpPath, "TWRP", true, icoPath);
-                        pf.UpdateProgress(100);
+                        pf.UpdateProgress(100,"Completed!");
                     });
+                    await Task.Delay(500);
+                    Functions.CreateShortcut(twrpPath, "TWRP", true, icoPath);
+                    pf.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error has occurred: \n{ex}", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    using (MessageForm mf = new MessageForm($"An error has occurred: \n{ex}", "sta Shortcuts Manager - Error", false))
+                    {
+                        mf.ShowDialog(this);
+                    }
+                    pf.Close();
                 }
             }
             else
             {
-                MessageBox.Show($"No internet connection. Please connect and try again.", "sta Shortcuts Manager - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                using (MessageForm mf = new MessageForm("No Internet connection. Please connect and try again.", "sta Shortcuts Manager - Error", false))
+                {
+                    mf.ShowDialog(this);
+                }
+                pf.Close();
             }
-            pf.UpdateProgress(100);
-            await Task.Delay(800);
-            pf.Close();
         }
         #endregion
     }

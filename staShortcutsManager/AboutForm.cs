@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace staShortcutManager
+namespace staShortcutsManager
 {
     public partial class AboutForm : Form
     {
@@ -23,14 +23,9 @@ namespace staShortcutManager
             this.Close();
         }
 
-        private void linkMisha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://t.me/Misha_803");
-        }
-
         private void linkAlexey_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://t.me/AlexeyProger");
+            Process.Start("https://t.me/AlexeyProger_tg");
         }
     }
 }

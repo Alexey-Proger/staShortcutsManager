@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace staShortcutManager
+namespace staShortcutsManager
 {
     internal static class Program
     {

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("staShortcutsManager")]
 [assembly: AssemblyDescription("This tool can create custom shortcuts for sta.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("WOA Tools & Scripts Official")]
+[assembly: AssemblyCompany("AlexeyProger")]
 [assembly: AssemblyProduct("sta Shortcuts Manager")]
-[assembly: AssemblyCopyright("© 2026, WOA Tools & Scripts Official. All rights reserved.")]
+[assembly: AssemblyCopyright("© 2026, AlexeyProger. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Номер сборки
 //      Редакция
 //
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
