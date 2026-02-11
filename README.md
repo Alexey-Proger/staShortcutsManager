@@ -4,7 +4,7 @@
 - An application for easily creating custom shortcuts for sta.
 
 ### Using:
-- Download tool from [release](https://github.com/Alexey-Proger/staShortcutsManager/releases/latest)
+- Download tool from [releases](https://github.com/Alexey-Proger/staShortcutsManager/releases/latest)
 - Run it and use :D
 > [!WARNING]
 > Please make sure that you are using the correct boot.img file with a custom shortcut!
