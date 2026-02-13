@@ -37,10 +37,13 @@
             // 
             // MessageLabel
             // 
+            this.MessageLabel.AutoSize = true;
             this.MessageLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.MessageLabel.Location = new System.Drawing.Point(1, 9);
+            this.MessageLabel.Location = new System.Drawing.Point(1, 10);
+            this.MessageLabel.MaximumSize = new System.Drawing.Size(362, 0);
+            this.MessageLabel.MinimumSize = new System.Drawing.Size(362, 0);
             this.MessageLabel.Name = "MessageLabel";
-            this.MessageLabel.Size = new System.Drawing.Size(362, 79);
+            this.MessageLabel.Size = new System.Drawing.Size(362, 25);
             this.MessageLabel.TabIndex = 0;
             this.MessageLabel.Text = "Android shortcut created successfully!";
             this.MessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -48,7 +51,7 @@
             // OK
             // 
             this.OK.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.OK.Location = new System.Drawing.Point(127, 91);
+            this.OK.Location = new System.Drawing.Point(125, 55);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(110, 40);
             this.OK.TabIndex = 2;
@@ -86,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 136);
+            this.ClientSize = new System.Drawing.Size(364, 189);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Yes);
             this.Controls.Add(this.OK);
@@ -100,6 +103,7 @@
             this.Text = "staShortcutsManager";
             this.TopMost = true;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

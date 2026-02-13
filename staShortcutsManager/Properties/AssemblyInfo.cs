@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
 [assembly: AssemblyTitle("staShortcutsManager")]
-[assembly: AssemblyDescription("This tool can create custom shortcuts for sta.")]
+[assembly: AssemblyDescription("An application for easily creating custom shortcuts for sta.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("AlexeyProger")]
 [assembly: AssemblyProduct("sta Shortcuts Manager")]

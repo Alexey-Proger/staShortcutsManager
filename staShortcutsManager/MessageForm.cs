@@ -20,16 +20,21 @@ namespace staShortcutsManager
             YND = YesNoDialog;
             MessageLabel.Text = Message;
             this.Text = Title;
+            this.Height = (10 + MessageLabel.Height + 110);
+            OK.Location = new Point(127, (this.Height-90));
             if (YesNoDialog)
             {
-                MessageLabel.Size = new System.Drawing.Size(362, 117);
+                //MessageLabel.Size = new System.Drawing.Size(362, 117);
                 Yes.Enabled = true;
                 Yes.Visible = true;
                 OK.Text = "No";
                 Cancel.Enabled = true;
                 Cancel.Visible = true;
-                this.Size = new System.Drawing.Size(380, 230);
-                OK.Location = new System.Drawing.Point(126, 139);
+                //this.Size = new System.Drawing.Size(380, 230);
+                OK.Location = new System.Drawing.Point(125, 139);
+                Yes.Location = new Point(13, (this.Height - 90));
+                OK.Location = new Point(127, (this.Height - 90));
+                Cancel.Location = new Point(241, (this.Height - 90));
             }
         }
 

@@ -63,7 +63,7 @@ namespace staShortcutsManager
 
             if (File.Exists(bootPathNew))
             {
-                Settings.Default.fileAction = 1;
+                Settings.Default.fileAction = 2;
                 using (MessageForm mf = new MessageForm($"File {bootPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", true))
                 {
                     mf.ShowDialog(this);
@@ -88,7 +88,7 @@ namespace staShortcutsManager
             {
                 if (!cancel)
                 {
-                    Settings.Default.fileAction = 1;
+                    Settings.Default.fileAction = 2;
                     using (MessageForm mf = new MessageForm($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", true))
                     {
                         mf.ShowDialog(this);
