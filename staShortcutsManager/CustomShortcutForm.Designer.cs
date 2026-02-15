@@ -56,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(68, 9);
+            this.label1.Location = new System.Drawing.Point(64, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 25);
             this.label1.TabIndex = 0;
@@ -114,6 +114,7 @@
             this.tBicon.ReadOnly = true;
             this.tBicon.Size = new System.Drawing.Size(226, 26);
             this.tBicon.TabIndex = 5;
+            this.tBicon.Text = "Default icon";
             this.tBicon.WordWrap = false;
             // 
             // label3

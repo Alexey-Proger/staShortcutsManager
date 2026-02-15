@@ -118,7 +118,12 @@ namespace staShortcutsManager
         private async Task twrpTask()
         {
             ProgressForm pf = new ProgressForm();
-            pf.Show();
+            pf.Location = new Point(
+                    this.Left + (this.Width - pf.Width) / 2,
+                    this.Top + (this.Height - pf.Height) / 2
+                );
+            pf.Show(this);
+            pf.UpdateProgress(0, "Downloading TWRP image...");
 
             if (Functions.InternetAvailability())
             {
@@ -127,8 +132,11 @@ namespace staShortcutsManager
                     await Task.Run(() =>
                     {
                         Functions.twrpUpdate();
-                        pf.UpdateProgress(100,"Completed!");
+                        pf.UpdateProgress(50, "Downloading TWRP icon...");
+                        Functions.twrpIcoUpdate();
                     });
+                    await Task.Delay(1300);
+                    pf.UpdateProgress(100, "Completed!");
                     await Task.Delay(500);
                     Functions.CreateShortcut(twrpPath, "TWRP", true, icoPath);
                     pf.Close();

@@ -38,16 +38,16 @@
             this.TaskLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.TaskLabel.Location = new System.Drawing.Point(12, 9);
             this.TaskLabel.Name = "TaskLabel";
-            this.TaskLabel.Size = new System.Drawing.Size(310, 28);
+            this.TaskLabel.Size = new System.Drawing.Size(290, 28);
             this.TaskLabel.TabIndex = 1;
             this.TaskLabel.Text = "no command";
             this.TaskLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(12, 40);
+            this.progressBar.Location = new System.Drawing.Point(12, 43);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(310, 16);
+            this.progressBar.Size = new System.Drawing.Size(290, 16);
             this.progressBar.TabIndex = 2;
             this.progressBar.UseWaitCursor = true;
             // 
@@ -55,20 +55,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 71);
+            this.ClientSize = new System.Drawing.Size(314, 71);
             this.ControlBox = false;
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.TaskLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(330, 110);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(350, 110);
+            this.MinimumSize = new System.Drawing.Size(330, 110);
             this.Name = "ProgressForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Please wait...";
-            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

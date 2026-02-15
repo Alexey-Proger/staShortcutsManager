@@ -63,7 +63,7 @@
             // 
             this.Yes.Enabled = false;
             this.Yes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Yes.Location = new System.Drawing.Point(12, 139);
+            this.Yes.Location = new System.Drawing.Point(12, 55);
             this.Yes.Name = "Yes";
             this.Yes.Size = new System.Drawing.Size(110, 40);
             this.Yes.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             this.Cancel.Enabled = false;
             this.Cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Cancel.Location = new System.Drawing.Point(242, 139);
+            this.Cancel.Location = new System.Drawing.Point(241, 55);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(110, 40);
             this.Cancel.TabIndex = 3;
@@ -89,19 +89,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 189);
+            this.ClientSize = new System.Drawing.Size(364, 108);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Yes);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.MessageLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MessageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "staShortcutsManager";
-            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

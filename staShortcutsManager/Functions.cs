@@ -136,9 +136,7 @@ namespace staShortcutsManager
         public static bool twrpUpdate()
         {
             string twrpUrl = "https://github.com/ArKT-7/twrp_device_xiaomi_nabu/releases/download/mod-win/V4-MODDED-TWRP-WINDOWS.img";
-            string icoUrl = "https://github.com/Alexey-Proger/files/releases/download/files/twrp.ico";
             string twrpPath = @"C:\bootfiles\twrp.img";
-            string icoPath = @"C:\bootfiles\twrp.ico";
             string folderPath = @"C:\bootfiles\";
 
             if (!Directory.Exists(folderPath))
@@ -149,6 +147,28 @@ namespace staShortcutsManager
             {
                 WebClient client = new WebClient();
                 client.DownloadFile(twrpUrl, twrpPath);
+                client.Dispose();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool twrpIcoUpdate()
+        {
+            string icoUrl = "https://github.com/Alexey-Proger/files/releases/download/files/twrp.ico";
+            string icoPath = @"C:\bootfiles\twrp.ico";
+            string folderPath = @"C:\bootfiles\";
+
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+            try
+            {
+                WebClient client = new WebClient();
                 client.DownloadFile(icoUrl, icoPath);
                 client.Dispose();
                 return true;

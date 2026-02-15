@@ -73,22 +73,25 @@ namespace staShortcutsManager
                     this.Top + (this.Height - pf.Height) / 2
                 );
             pf.Show(this);
+            pf.UpdateProgress(0, $"Updating {(!Settings.Default.useSdd ? "sta" : "sdd")}...");
 
             if (Functions.InternetAvailability())
             {
                 try
                 {
+                    await Task.Delay(1300);
                     await Task.Run(() =>
                     {
-                        pf.UpdateProgress(0, $"Updating {(!Settings.Default.useSdd ? "sta" : "sdd")}...");
                         if (!Settings.Default.useSdd) Functions.staUpdate();
                         else Functions.sddUpdate();
 
-                        pf.UpdateProgress(50, "Updating TWRP files...");
+                        pf.UpdateProgress(33, "Updating TWRP image...");
                         Functions.twrpUpdate();
-
-                        pf.UpdateProgress(100, "Completed!");
+                        pf.UpdateProgress(66, "Updating TWRP icon...");
+                        Functions.twrpIcoUpdate();
                     });
+                    await Task.Delay(1300);
+                    pf.UpdateProgress(100, "Completed!");
                     await Task.Delay(800);
                     using (MessageForm mf = new MessageForm($"{(!Settings.Default.useSdd ? "sta" : "sdd")} and TWRP updated successfully.", "sta Shortcuts Manager", false))
                     {

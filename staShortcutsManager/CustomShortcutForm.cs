@@ -14,15 +14,26 @@ namespace staShortcutsManager
 {
     public partial class CustomShortcutForm : Form
     {
-        public CustomShortcutForm()
-        {
-            InitializeComponent();
-        }
-
         private string bootPath;
         private string bootName;
-        private string iconPath;
-        private string iconName;
+        private string iconPath = @"C:\bootfiles\";
+        private string iconName = "disc.ico";
+
+        public CustomShortcutForm()
+        {
+            string iconPathSSM = Path.Combine(iconPath, iconName);
+            if (!File.Exists(iconPathSSM))
+            {
+                byte[] data;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    Resources.disc.Save(ms);
+                    data = ms.ToArray();
+                }
+                File.WriteAllBytes(iconPathSSM, data);
+            }
+            InitializeComponent();
+        }
 
         #region Buttons logic
         private void butBoot_Click(object sender, EventArgs e)
@@ -32,7 +43,7 @@ namespace staShortcutsManager
                 bootPath = openIMG.FileName;
                 bootName = openIMG.SafeFileName;
                 tBboot.Text = bootPath;
-                if (iconPath != null && tBname.Text != "")
+                if (tBname.Text != "")
                     butCreate.Enabled = true;
             }
         }
@@ -41,12 +52,16 @@ namespace staShortcutsManager
         {
             if (openICON.ShowDialog() == DialogResult.OK)
             {
-                iconPath = openICON.FileName;
-                iconName = openICON.SafeFileName;
                 tBicon.Text = iconPath;
-                if (bootPath != null && tBname.Text != "")
-                    butCreate.Enabled = true;
             }
+        }
+
+        private void tBname_TextChanged(object sender, EventArgs e)
+        {
+            if (bootPath != null && tBname.Text != "")
+                butCreate.Enabled = true;
+            else
+                butCreate.Enabled = false;
         }
 
         private void butCreate_Click(object sender, EventArgs e)
@@ -86,7 +101,7 @@ namespace staShortcutsManager
 
             if (File.Exists(iconPathNew))
             {
-                if (!cancel)
+                if (!cancel &&  iconPathNew != @"C:\bootfiles\disc.ico")
                 {
                     Settings.Default.fileAction = 2;
                     using (MessageForm mf = new MessageForm($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", true))
@@ -120,14 +135,6 @@ namespace staShortcutsManager
         private void butCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void tBname_TextChanged(object sender, EventArgs e)
-        {
-            if (iconPath != null && bootPath != null && tBname.Text != "")
-                butCreate.Enabled = true;
-            else
-                butCreate.Enabled = false;
         }
         #endregion
     }
