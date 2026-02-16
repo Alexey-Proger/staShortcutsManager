@@ -3,7 +3,7 @@
 ## English
 - An application for easily creating custom shortcuts for sta.
 
-### Using:
+### Usage:
 - Download tool from [releases](https://github.com/Alexey-Proger/staShortcutsManager/releases/latest)
 - Run it and use :D
 > [!WARNING]
