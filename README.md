@@ -1,25 +1,26 @@
 # staShortcutsManager
 
+## English
+- An application for easily creating custom shortcuts for sta.
+
+### Using:
+- Download tool from [releases](https://github.com/Alexey-Proger/staShortcutsManager/releases/latest)
+- Run it and use :D
+> [!WARNING]
+> Please make sure that you are using the correct boot.img file with a custom shortcut!
+
+> [!NOTE]
+> An internet connection is required to download TWRP, sta and sdd.
+
 ## Russian
 - Приложение для простого создания кастомных ярлыков для sta.
 
 ### Использование:
-- Скачайте приложение из релизов
+- Скачайте приложение из [релизов](https://github.com/Alexey-Proger/staShortcutsManager/releases/latest)
 - Запустите его и используйте :D
 > [!WARNING]
-> При создании кастомного ярлыка убедитесь, что файл .img исправен!
+> При создании кастомного ярлыка убедитесь, что вы используете правильный boot.img!
 
 > [!NOTE]
-> Для скачивания и обновления twrp нужно подключение к интернету.
+> Для скачивания TWRP, sta и sdd нужно подключение к интернету.
 
-## English
-- A tool that lets you easily create custom sta shortcuts. 
-
-### Using:
-- Download tool from release
-- Run it and use :D
-> [!WARNING]
-> Please make sure that you using valid boot file with custom shortcut! 
-
-> [!NOTE]
-> Connection to Internet will be needed for downloading and updating TWRP.

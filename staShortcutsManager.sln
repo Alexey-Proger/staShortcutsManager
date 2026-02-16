@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "staShortcutsManager", "staShortcutsManager\staShortcutsManager.csproj", "{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
+		Release|Any CPU = Release|Any CPU
+		Release|ARM64 = Release|ARM64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}.Debug|ARM64.Build.0 = Debug|ARM64
+		{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}.Release|ARM64.ActiveCfg = Release|ARM64
+		{DE01CE89-66BF-4879-89AA-FA0D2BAC71A6}.Release|ARM64.Build.0 = Release|ARM64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D03F093-02BE-4773-A523-4E7D21A0525E}
+	EndGlobalSection
+EndGlobal
