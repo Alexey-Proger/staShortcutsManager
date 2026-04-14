@@ -671,7 +671,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>sta Shortcuts Manager v1.1</value>
+    <value>sta Shortcuts Manager v1.1.1</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

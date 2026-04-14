@@ -13,6 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Management;
+
 namespace staShortcutsManager
 {
     public partial class MainForm : Form
@@ -59,6 +61,14 @@ namespace staShortcutsManager
             }
 
             InitializeComponent();
+
+            //hotfix
+            checkForNabu();
+            if (Settings.Default.isNabu == false)
+            {
+                twrp.Enabled = false;
+                twrp.Text = "Device not supported :(";
+            }
         }
 
         #endregion
@@ -114,6 +124,18 @@ namespace staShortcutsManager
         #endregion
 
         #region Tasks
+        private static void checkForNabu()
+        {
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT Model FROM Win32_ComputerSystem");
+            foreach (ManagementObject obj in searcher.Get())
+            {
+                //return (string)obj["Model"];
+                if ((string)obj["Model"] == "Pad 5")
+                {
+                    Settings.Default.isNabu = true;
+                }
+            }
+        }
 
         private async Task twrpTask()
         {

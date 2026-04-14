@@ -20,6 +20,15 @@ namespace staShortcutsManager
             if (Settings.Default.useSdd)
                 updateAll.Text = "Update sdd and TWRP";
             updateAll.Enabled = Functions.InternetAvailability();
+
+            //hotfix
+            if (Settings.Default.isNabu == false)
+            {
+                if (Settings.Default.useSdd)
+                    updateAll.Text = "Update sdd";
+                else
+                    updateAll.Text = "Update sta";
+            }
         }
 
         #region Buttons logic
@@ -85,15 +94,28 @@ namespace staShortcutsManager
                         if (!Settings.Default.useSdd) Functions.staUpdate();
                         else Functions.sddUpdate();
 
-                        pf.UpdateProgress(33, "Updating TWRP image...");
-                        Functions.twrpUpdate();
-                        pf.UpdateProgress(66, "Updating TWRP icon...");
-                        Functions.twrpIcoUpdate();
+                        //hotfix
+                        if (Settings.Default.isNabu == true)
+                        {
+                            pf.UpdateProgress(33, "Updating TWRP image...");
+                            Functions.twrpUpdate();
+                            pf.UpdateProgress(66, "Updating TWRP icon...");
+                            Functions.twrpIcoUpdate();
+                        }
                     });
                     await Task.Delay(1300);
                     pf.UpdateProgress(100, "Completed!");
                     await Task.Delay(800);
-                    using (MessageForm mf = new MessageForm($"{(!Settings.Default.useSdd ? "sta" : "sdd")} and TWRP updated successfully.", "sta Shortcuts Manager", false))
+
+                    //hotfix
+
+                    string Message;
+                    if (Settings.Default.isNabu == true)
+                        Message = $"{(!Settings.Default.useSdd ? "sta" : "sdd")} and TWRP updated successfully.";
+                    else
+                        Message = $"{(!Settings.Default.useSdd ? "sta" : "sdd")} updated successfully.";
+
+                    using (MessageForm mf = new MessageForm(Message, "sta Shortcuts Manager", false))
                     {
                         mf.ShowDialog(this);
                     }
