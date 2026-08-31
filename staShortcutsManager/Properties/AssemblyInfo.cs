@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
 [assembly: AssemblyTitle("staShortcutsManager")]
-[assembly: AssemblyDescription("An application for easily creating custom shortcuts for sta.")]
+[assembly: AssemblyDescription("A tool that lets you easily create custom shortcuts for StA.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("AlexeyProger")]
+[assembly: AssemblyCompany("AlexeyProger Tools")]
 [assembly: AssemblyProduct("sta Shortcuts Manager")]
-[assembly: AssemblyCopyright("© 2026, AlexeyProger. All rights reserved.")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("AlexeyProger Tools©, 2026. All rights reserved.")]
+[assembly: AssemblyTrademark("sta Shortcuts Manager")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Номер сборки
 //      Редакция
 //
-[assembly: AssemblyVersion("1.1.1.0")]
-[assembly: AssemblyFileVersion("1.1.1.0")]
+[assembly: AssemblyVersion("2.0.0.0")]
+[assembly: AssemblyFileVersion("2.0.0.0")]

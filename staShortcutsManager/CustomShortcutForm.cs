@@ -16,22 +16,16 @@ namespace staShortcutsManager
     {
         private string bootPath;
         private string bootName;
-        private string iconPath = @"C:\bootfiles\";
+        private string iconPath = Settings.Default.appFolder;
         private string iconName = "disc.ico";
 
         public CustomShortcutForm()
         {
-            string iconPathSSM = Path.Combine(iconPath, iconName);
-            if (!File.Exists(iconPathSSM))
+            if (!Directory.Exists(Settings.Default.appFolder))
             {
-                byte[] data;
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    Resources.disc.Save(ms);
-                    data = ms.ToArray();
-                }
-                File.WriteAllBytes(iconPathSSM, data);
+                Directory.CreateDirectory(Settings.Default.appFolder);
             }
+
             InitializeComponent();
         }
 
@@ -52,6 +46,8 @@ namespace staShortcutsManager
         {
             if (openICON.ShowDialog() == DialogResult.OK)
             {
+                iconPath = openICON.FileName;
+                iconName = openICON.SafeFileName;
                 tBicon.Text = iconPath;
             }
         }
@@ -66,7 +62,7 @@ namespace staShortcutsManager
 
         private void butCreate_Click(object sender, EventArgs e)
         {
-            string folderPath = @"C:\bootfiles\";
+            string folderPath = Settings.Default.appFolder;
             string bootPathNew = Path.Combine(folderPath, bootName);
             string iconPathNew = Path.Combine(folderPath, iconName);
             bool cancel = false;
@@ -76,18 +72,17 @@ namespace staShortcutsManager
                 Directory.CreateDirectory(folderPath);
             }
 
-            if (File.Exists(bootPathNew))
+            if (File.Exists(bootPathNew) && !bootPath.Contains(folderPath))
             {
                 Settings.Default.fileAction = 2;
-                using (MessageForm mf = new MessageForm($"File {bootPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", true))
+                using (MessageForm mf = new MessageForm($"File {bootPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", "YesNoCancel"))
                 {
                     mf.ShowDialog(this);
                 }
                 switch (Settings.Default.fileAction)
                 {
                     case 0:
-                        File.Delete(bootPathNew);
-                        File.Copy(bootPath, bootPathNew);
+                        File.Copy(bootPath, bootPathNew, true);
                         break;
                     case 1:
                         break;
@@ -99,20 +94,32 @@ namespace staShortcutsManager
             else
                 File.Copy(bootPath, bootPathNew);
 
+            string iconPathSSM = Path.Combine(iconPath, iconName);
+
+            if (!File.Exists(iconPathSSM))
+            {
+                byte[] data;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    Resources.disc.Save(ms);
+                    data = ms.ToArray();
+                }
+                File.WriteAllBytes(iconPathSSM, data);
+            }
+
             if (File.Exists(iconPathNew))
             {
-                if (!cancel &&  iconPathNew != @"C:\bootfiles\disc.ico")
+                if (!cancel &&  iconPathNew != Path.Combine(Settings.Default.appFolder, "disc.ico"))
                 {
                     Settings.Default.fileAction = 2;
-                    using (MessageForm mf = new MessageForm($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", true))
+                    using (MessageForm mf = new MessageForm($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", "Default"))
                     {
                         mf.ShowDialog(this);
                     }
                     switch (Settings.Default.fileAction)
                     {
                         case 0:
-                            File.Delete(iconPathNew);
-                            File.Copy(iconPath, iconPathNew);
+                            File.Copy(iconPath, iconPathNew, true);
                             break;
                         case 1:
                             break;

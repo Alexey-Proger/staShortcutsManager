@@ -35,8 +35,9 @@
             this.exit = new System.Windows.Forms.Button();
             this.settings = new System.Windows.Forms.Button();
             this.custom = new System.Windows.Forms.Button();
-            this.twrp = new System.Windows.Forms.Button();
+            this.recovery = new System.Windows.Forms.Button();
             this.android = new System.Windows.Forms.Button();
+            this.flash = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // select_an_action
@@ -81,13 +82,13 @@
             this.custom.UseVisualStyleBackColor = true;
             this.custom.Click += new System.EventHandler(this.custom_Click);
             // 
-            // twrp
+            // recovery
             // 
-            resources.ApplyResources(this.twrp, "twrp");
-            this.twrp.Image = global::staShortcutsManager.Properties.Resources.twrp;
-            this.twrp.Name = "twrp";
-            this.twrp.UseVisualStyleBackColor = true;
-            this.twrp.Click += new System.EventHandler(this.twrp_Click);
+            resources.ApplyResources(this.recovery, "recovery");
+            this.recovery.Image = global::staShortcutsManager.Properties.Resources.twrp;
+            this.recovery.Name = "recovery";
+            this.recovery.UseVisualStyleBackColor = true;
+            this.recovery.Click += new System.EventHandler(this.recovery_Click);
             // 
             // android
             // 
@@ -97,16 +98,25 @@
             this.android.UseVisualStyleBackColor = true;
             this.android.Click += new System.EventHandler(this.android_Click);
             // 
+            // flash
+            // 
+            resources.ApplyResources(this.flash, "flash");
+            this.flash.Image = global::staShortcutsManager.Properties.Resources.flash;
+            this.flash.Name = "flash";
+            this.flash.UseVisualStyleBackColor = true;
+            this.flash.Click += new System.EventHandler(this.flash_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.flash);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.about);
             this.Controls.Add(this.settings);
             this.Controls.Add(this.separator);
             this.Controls.Add(this.custom);
-            this.Controls.Add(this.twrp);
+            this.Controls.Add(this.recovery);
             this.Controls.Add(this.android);
             this.Controls.Add(this.select_an_action);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -121,12 +131,13 @@
 
         private System.Windows.Forms.Label select_an_action;
         private System.Windows.Forms.Button android;
-        private System.Windows.Forms.Button twrp;
+        private System.Windows.Forms.Button recovery;
         private System.Windows.Forms.Button custom;
         private System.Windows.Forms.Label separator;
         private System.Windows.Forms.Button settings;
         private System.Windows.Forms.Button about;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button flash;
     }
 }
 

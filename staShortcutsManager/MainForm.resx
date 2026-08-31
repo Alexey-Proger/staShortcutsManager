@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;select_an_action.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="separator.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -160,7 +160,7 @@
     <value>NoControl</value>
   </data>
   <data name="separator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 189</value>
+    <value>17, 231</value>
   </data>
   <data name="separator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 0</value>
@@ -187,7 +187,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;separator.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="about.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.75pt</value>
@@ -199,7 +199,7 @@
     <value>NoControl</value>
   </data>
   <data name="about.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 204</value>
+    <value>195, 246</value>
   </data>
   <data name="about.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 0, 0</value>
@@ -223,7 +223,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;about.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="exit.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.75pt</value>
@@ -232,7 +232,7 @@
     <value>NoControl</value>
   </data>
   <data name="exit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 250</value>
+    <value>19, 292</value>
   </data>
   <data name="exit.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 40</value>
@@ -253,7 +253,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;exit.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="settings.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.75pt</value>
@@ -265,7 +265,7 @@
     <value>NoControl</value>
   </data>
   <data name="settings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 204</value>
+    <value>19, 246</value>
   </data>
   <data name="settings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 0, 0</value>
@@ -289,7 +289,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;settings.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="custom.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.75pt</value>
@@ -301,7 +301,7 @@
     <value>NoControl</value>
   </data>
   <data name="custom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 138</value>
+    <value>20, 138</value>
   </data>
   <data name="custom.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 0, 0</value>
@@ -325,43 +325,43 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;custom.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
-  <data name="twrp.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="recovery.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.75pt</value>
   </data>
-  <data name="twrp.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="recovery.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="twrp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="recovery.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="twrp.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="recovery.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 92</value>
   </data>
-  <data name="twrp.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="recovery.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 0, 0</value>
   </data>
-  <data name="twrp.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="recovery.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 40</value>
   </data>
-  <data name="twrp.TabIndex" type="System.Int32, mscorlib">
+  <data name="recovery.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="twrp.Text" xml:space="preserve">
-    <value>Create TWRP shortcut</value>
+  <data name="recovery.Text" xml:space="preserve">
+    <value>Create recovery shortcut</value>
   </data>
-  <data name="&gt;&gt;twrp.Name" xml:space="preserve">
-    <value>twrp</value>
+  <data name="&gt;&gt;recovery.Name" xml:space="preserve">
+    <value>recovery</value>
   </data>
-  <data name="&gt;&gt;twrp.Type" xml:space="preserve">
+  <data name="&gt;&gt;recovery.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;twrp.Parent" xml:space="preserve">
+  <data name="&gt;&gt;recovery.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;twrp.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;recovery.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="android.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.75pt</value>
@@ -397,16 +397,52 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;android.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
+  </data>
+  <data name="flash.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.75pt</value>
+  </data>
+  <data name="flash.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="flash.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="flash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 184</value>
+  </data>
+  <data name="flash.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="flash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>346, 40</value>
+  </data>
+  <data name="flash.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="flash.Text" xml:space="preserve">
+    <value>Flash any boot image</value>
+  </data>
+  <data name="&gt;&gt;flash.Name" xml:space="preserve">
+    <value>flash</value>
+  </data>
+  <data name="&gt;&gt;flash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flash.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flash.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>384, 301</value>
+    <value>384, 345</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -671,7 +707,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>sta Shortcuts Manager v1.1.1</value>
+    <value>sta Shortcuts Manager v2.0</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

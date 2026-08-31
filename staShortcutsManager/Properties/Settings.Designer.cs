@@ -12,7 +12,7 @@ namespace staShortcutsManager.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "18.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "18.6.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -49,13 +49,25 @@ namespace staShortcutsManager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool isNabu {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string deviceName {
             get {
-                return ((bool)(this["isNabu"]));
+                return ((string)(this["deviceName"]));
             }
             set {
-                this["isNabu"] = value;
+                this["deviceName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\sta\\bootfiles")]
+        public string appFolder {
+            get {
+                return ((string)(this["appFolder"]));
+            }
+            set {
+                this["appFolder"] = value;
             }
         }
     }

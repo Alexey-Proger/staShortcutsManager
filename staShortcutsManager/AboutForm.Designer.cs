@@ -40,8 +40,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::staShortcutsManager.Properties.Resources.icon1;
-            this.pictureBox1.InitialImage = global::staShortcutsManager.Properties.Resources.about;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 65);
@@ -64,9 +63,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(88, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 23);
+            this.label2.Size = new System.Drawing.Size(41, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "v1.1.1 (hotfix)";
+            this.label2.Text = "v2.0";
             // 
             // label3
             // 
@@ -77,7 +76,7 @@
             this.label3.Size = new System.Drawing.Size(352, 115);
             this.label3.TabIndex = 3;
             this.label3.Text = "This tool can create custom shortcuts for sta.\r\nNotice: Some functions require an" +
-    " Internet \r\nconnection.\r\n\r\nAuthor: @AlexeyProger";
+    " Internet \r\nconnection.\r\n\r\nAuthor:";
             // 
             // butOK
             // 
@@ -94,7 +93,8 @@
             // 
             this.linkAlexey.AutoSize = true;
             this.linkAlexey.Font = new System.Drawing.Font("Segoe UI", 12.75F);
-            this.linkAlexey.Location = new System.Drawing.Point(72, 172);
+            this.linkAlexey.LinkColor = System.Drawing.SystemColors.HotTrack;
+            this.linkAlexey.Location = new System.Drawing.Point(72, 173);
             this.linkAlexey.Name = "linkAlexey";
             this.linkAlexey.Size = new System.Drawing.Size(126, 23);
             this.linkAlexey.TabIndex = 5;
@@ -104,9 +104,9 @@
             // 
             // AboutForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 208);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(369, 204);
             this.Controls.Add(this.linkAlexey);
             this.Controls.Add(this.butOK);
             this.Controls.Add(this.label3);

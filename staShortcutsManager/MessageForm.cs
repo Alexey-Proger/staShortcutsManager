@@ -13,28 +13,52 @@ namespace staShortcutsManager
 {
     public partial class MessageForm : Form
     {
-        private bool YND;
-        public MessageForm(string Message, string Title, bool YesNoDialog)
+        private string DM;
+        public MessageForm(string Message, string Title, string DialogMode)
         {
             InitializeComponent();
-            YND = YesNoDialog;
+
+            DM = DialogMode;
             MessageLabel.Text = Message;
             this.Text = Title;
-            this.Height = (10 + MessageLabel.Height + 110);
-            OK.Location = new Point(127, (this.Height-90));
-            if (YesNoDialog)
+            this.Height = (GetProperSize(10) + MessageLabel.Height + GetProperSize(110) - GetProperSize(10));
+            OK.Location = new Point(GetProperSize(127), (this.Height - GetProperSize(90)));
+
+            switch (DialogMode)
             {
-                //MessageLabel.Size = new System.Drawing.Size(362, 117);
-                Yes.Enabled = true;
-                Yes.Visible = true;
-                OK.Text = "No";
-                Cancel.Enabled = true;
-                Cancel.Visible = true;
-                //this.Size = new System.Drawing.Size(380, 230);
-                OK.Location = new System.Drawing.Point(125, 139);
-                Yes.Location = new Point(13, (this.Height - 90));
-                OK.Location = new Point(127, (this.Height - 90));
-                Cancel.Location = new Point(241, (this.Height - 90));
+                case ("YesNoCancel"):
+                    Yes.Enabled = true;
+                    Yes.Visible = true;
+                    OK.Text = "No";
+                    Cancel.Enabled = true;
+                    Cancel.Visible = true;
+                    Yes.Location = new Point(GetProperSize(13), (this.Height - GetProperSize(90)));
+                    OK.Location = new Point(GetProperSize(127), (this.Height - GetProperSize(90)));
+                    Cancel.Location = new Point(GetProperSize(241), (this.Height - GetProperSize(90)));
+                    break;
+                case ("YesNo"):
+                    Yes.Enabled = true;
+                    Yes.Visible = true;
+                    OK.Text = "No";
+                    Yes.Location = new Point(GetProperSize(13), (this.Height - GetProperSize(90)));
+                    OK.Location = new Point(GetProperSize(201), (this.Height - GetProperSize(90)));
+                    Yes.Width = GetProperSize(150);
+                    OK.Width = GetProperSize(150);
+                    break;
+                case ("AppFolder"):
+                    Yes.Enabled = true;
+                    Yes.Visible = true;
+                    Yes.Text = "Change";
+                    OK.Text = "Restore";
+                    Cancel.Text = "Cancel";
+                    Cancel.Enabled = true;
+                    Cancel.Visible = true;
+                    Yes.Location = new Point(GetProperSize(13), (this.Height - GetProperSize(90)));
+                    OK.Location = new Point(GetProperSize(127), (this.Height - GetProperSize(90)));
+                    Cancel.Location = new Point(GetProperSize(241), (this.Height - GetProperSize(90)));
+                    if(Settings.Default.appFolder == @"C:\sta\bootfiles")
+                        OK.Enabled = false;
+                    break;
             }
         }
 
@@ -46,7 +70,7 @@ namespace staShortcutsManager
 
         private void OK_Click(object sender, EventArgs e)
         {
-            if (YND)
+            if (DM != "Default")
                 Settings.Default.fileAction = 1;
             this.Close();
         }
@@ -55,6 +79,14 @@ namespace staShortcutsManager
         {
             Settings.Default.fileAction = 2;
             this.Close();
+        }
+
+        private int GetProperSize(int size)
+        {
+            int properIconSize;
+            using (Graphics graphics = this.CreateGraphics())
+                properIconSize = (int)((double)size * ((double)graphics.DpiX / 96.0));
+            return properIconSize;
         }
     }
 }

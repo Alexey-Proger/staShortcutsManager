@@ -86,7 +86,7 @@
             // butBoot
             // 
             this.butBoot.Font = new System.Drawing.Font("Segoe UI", 12.75F);
-            this.butBoot.Location = new System.Drawing.Point(248, 61);
+            this.butBoot.Location = new System.Drawing.Point(248, 60);
             this.butBoot.Name = "butBoot";
             this.butBoot.Size = new System.Drawing.Size(104, 32);
             this.butBoot.TabIndex = 3;
@@ -97,7 +97,7 @@
             // butIcon
             // 
             this.butIcon.Font = new System.Drawing.Font("Segoe UI", 12.75F);
-            this.butIcon.Location = new System.Drawing.Point(248, 118);
+            this.butIcon.Location = new System.Drawing.Point(248, 117);
             this.butIcon.Name = "butIcon";
             this.butIcon.Size = new System.Drawing.Size(104, 32);
             this.butIcon.TabIndex = 6;
@@ -175,8 +175,8 @@
             // 
             // CustomShortcutForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.butCancel;
             this.ClientSize = new System.Drawing.Size(364, 269);
             this.Controls.Add(this.tBname);
