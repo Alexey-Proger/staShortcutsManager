@@ -52,7 +52,13 @@ namespace staShortcutsManager
             {
                 if (FolderSelect.ShowDialog(this) == DialogResult.OK)
                 {
-                    using (MessageForm mf = new MessageForm($"Do you want to copy files into {FolderSelect.SelectedPath}?", "sta Shortcuts Manager", "YesNo"))
+                    string selectedPath = Path.Combine(FolderSelect.SelectedPath, "bootfiles");
+                    if (!Directory.Exists(selectedPath))
+                    {
+                        Directory.CreateDirectory(selectedPath);
+                    }
+
+                    using (MessageForm mf = new MessageForm($"Do you want to copy files into {selectedPath}?", "sta Shortcuts Manager", "YesNo"))
                     {
                         Settings.Default.fileAction = 0;
                         mf.ShowDialog(this);
@@ -67,7 +73,7 @@ namespace staShortcutsManager
                             foreach (string file in files)
                             {
                                 string filename = Path.GetFileName(file);
-                                string newFile = Path.Combine(FolderSelect.SelectedPath, filename);
+                                string newFile = Path.Combine(selectedPath, filename);
                                 if (System.IO.File.Exists(newFile))
                                 {
                                     using (MessageForm mf = new MessageForm($"File exist: {newFile}\nDo you want to override it?", "sta Shortcuts Manager", "YesNo"))
@@ -105,8 +111,8 @@ namespace staShortcutsManager
                     }
 
 
-                    Settings.Default.appFolder = FolderSelect.SelectedPath;
-                    using (MessageForm mf = new MessageForm($"App folder changed to {Settings.Default.appFolder}\nPlease re-create shortcuts.", "sta Shortcuts Manager - completed", "Default"))
+                    Settings.Default.appFolder = selectedPath;
+                    using (MessageForm mf = new MessageForm($"App folder changed to {selectedPath}\nPlease re-create shortcuts.", "sta Shortcuts Manager - completed", "Default"))
                     {
                         mf.ShowDialog(this);
                     }

@@ -91,7 +91,6 @@
             // 
             // linkAlexey
             // 
-            this.linkAlexey.AutoSize = true;
             this.linkAlexey.Font = new System.Drawing.Font("Segoe UI", 12.75F);
             this.linkAlexey.LinkColor = System.Drawing.SystemColors.HotTrack;
             this.linkAlexey.Location = new System.Drawing.Point(72, 173);

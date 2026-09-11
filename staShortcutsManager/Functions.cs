@@ -18,8 +18,6 @@ namespace staShortcutsManager
         private static string staPath;
         private static string sddPath;
 
-        public static String[] devices = new String[] { "Pad 5", "POCO X3 Pro", "Mix 2s", "Mi 9T Pro", "Mi 9", "Mi 8 Pro", "Mi 8", "7 Pro", "POCO F1", "Mix 3" };
-
         public static bool staCheck()
         {
             string[] possiblePaths = { @"C:\sta\sta.exe", @"C:\ProgramData\sta\sta.exe" };
@@ -97,9 +95,9 @@ namespace staShortcutsManager
                 WshShell shell = new WshShell();
                 IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
                 shortcut.TargetPath = targetPath;
-                shortcut.Arguments = $"-p \"{bootPath}\"";
+                shortcut.Arguments = $"-f -p \"{bootPath}\"";
                 shortcut.WorkingDirectory = Path.GetDirectoryName(targetPath);
-                shortcut.Description = "";
+                shortcut.Description = $"StA shortcut for switching to {shortcutName}.";
                 if (customIcon)
                     shortcut.IconLocation = iconLocation;
                 shortcut.Save();

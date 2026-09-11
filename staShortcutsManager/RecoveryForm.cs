@@ -171,7 +171,7 @@ namespace staShortcutsManager
                 {
                     if (File.Exists(targetPath) && File.Exists(icoPath))
                     {
-                        using (MessageForm mf = new MessageForm("This recovery is downloaded. Do you want to update it?", "sta Shortcuts Manager", "YesNo"))
+                        using (MessageForm mf = new MessageForm("This recovery is downloaded. Do you want to override it?", "sta Shortcuts Manager", "YesNo"))
                         {
                             Settings.Default.fileAction = 0;
                             mf.ShowDialog(this);
