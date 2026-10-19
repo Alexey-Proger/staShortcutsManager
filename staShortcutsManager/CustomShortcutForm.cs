@@ -112,7 +112,7 @@ namespace staShortcutsManager
                 if (!cancel &&  iconPathNew != Path.Combine(Settings.Default.appFolder, "disc.ico"))
                 {
                     Settings.Default.fileAction = 2;
-                    using (MessageForm mf = new MessageForm($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", "Default"))
+                    using (MessageForm mf = new MessageForm($"File {iconPathNew} already exists.\nDo you want to replace it?", "sta Shortcuts Manager", "YesNoCancel"))
                     {
                         mf.ShowDialog(this);
                     }
