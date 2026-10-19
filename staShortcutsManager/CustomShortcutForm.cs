@@ -19,6 +19,8 @@ namespace staShortcutsManager
         private string iconPath = Settings.Default.appFolder;
         private string iconName = "disc.ico";
 
+        private string iconPathSSM = Path.Combine(Settings.Default.appFolder, "disc.ico");
+
         public CustomShortcutForm()
         {
             if (!Directory.Exists(Settings.Default.appFolder))
@@ -93,8 +95,6 @@ namespace staShortcutsManager
             }
             else
                 File.Copy(bootPath, bootPathNew);
-
-            string iconPathSSM = Path.Combine(iconPath, iconName);
 
             if (!File.Exists(iconPathSSM))
             {
