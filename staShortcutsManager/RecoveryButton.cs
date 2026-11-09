@@ -29,7 +29,7 @@ namespace staShortcutsManager
                 switch (recoveryIcon)
                 {
                     case 0:
-                        recovery_icon.Image = (Image)new Bitmap((Image)Resources.twrp2, new Size(GetProperSize(64), GetProperSize(64)));
+                        recovery_icon.Image = (Image)new Bitmap((Image)Resources.twrp, new Size(GetProperSize(64), GetProperSize(64)));
                         recovery_name.Text = "TWRP";
                         break;
                     case 1:

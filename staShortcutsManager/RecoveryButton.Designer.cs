@@ -58,7 +58,7 @@
             // recovery_icon
             // 
             this.recovery_icon.BackColor = System.Drawing.Color.Transparent;
-            this.recovery_icon.Image = global::staShortcutsManager.Properties.Resources.twrp2;
+            this.recovery_icon.Image = global::staShortcutsManager.Properties.Resources.twrp;
             this.recovery_icon.Location = new System.Drawing.Point(7, 4);
             this.recovery_icon.Name = "recovery_icon";
             this.recovery_icon.Size = new System.Drawing.Size(70, 67);
